@@ -2,7 +2,7 @@
 
 This repository contains the code for reproducing the analyses and figures in:
 
-> Yang, Z.-B., Li, J.-T., Wang, X.-Y., Zhang, Z.-X., Wu, T., Fei, Q., Feng, G., Zhang, N.-N.\*, Kumacheva, E.\*, & Liu, K.\* *Full-Spectrum Mapping of the Synthesis Landscape for Chiral Gold Nanoparticles*. Nature Synthesis (2026).
+> Yang, Z.-B., Li, J.-T., Wang, X.-Y., Zhang, Z.-X., Wu, T., Fei, Q., Feng, G., Zhang, N.-N.\*, Kumacheva, E.\*, & Liu, K.\* *Full-Spectrum Mapping of the Synthesis Landscape for Chiral Gold Nanoparticles*. XXXX(2026).
 
 ## Abstract
 
