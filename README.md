@@ -98,7 +98,7 @@ If you use this code in your research, please cite:
 @article{yang2026fullspectrum,
   title={Full-Spectrum Mapping of the Synthesis Landscape for Chiral Gold Nanoparticles},
   author={Yang, Zhi-Bo and Li, Jia-Tong and Wang, Xue-Yao and Zhang, Zi-Xuan and Wu, Tianyi and Fei, Qiang and Feng, Guodong and Zhang, Ning-Ning and Kumacheva, Eugenia and Liu, Kun},
-  journal={Nature Synthesis},
+  journal={XXXXXX},
   year={2026},
   doi={10.1038/XXXXXXX}
 }
