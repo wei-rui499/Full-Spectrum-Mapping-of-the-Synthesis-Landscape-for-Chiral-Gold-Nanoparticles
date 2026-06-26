@@ -1,7 +1,8 @@
-numpy==2.4.6
-pandas==2.3.3
-scipy==1.17.1
-scikit-learn==1.8.0
-matplotlib==3.10.8
-umap-learn==0.5.11
-shap==0.51.0
+numpy>=2.0.2,<3
+pandas>=2.3.3,<3
+scipy>=1.13.1,<2
+scikit-learn>=1.6.1,<2
+matplotlib>=3.9.4,<4
+umap-learn>=0.5.11,<0.6
+shap>=0.49.1,<0.52
+openpyxl>=3.1.5,<4
