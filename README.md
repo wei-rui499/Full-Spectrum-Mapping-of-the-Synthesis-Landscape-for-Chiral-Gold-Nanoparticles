@@ -1,8 +1,8 @@
-# Full-Spectrum-Mapping-of-the-Synthesis-Landscape-for-Chiral-Gold-Nanoparticles
+# Full-Spectrum Mapping of the Synthesis Landscape for Chiral Gold Nanoparticles
 
 This repository contains the code for reproducing the analyses and figures in:
 
-> Yang, Z.-B., Li, J.-T., Wang, X.-Y., Zhang, Z.-X., Wu, T., Fei, Q., Feng, G., Zhang, N.-N.\*, Kumacheva, E.\*, & Liu, K.\* *Full-Spectrum Mapping of the Synthesis Landscape for Chiral Gold Nanoparticles*. XXXX(2026).
+> Yang, Z.-B., Li, J.-T., Wang, X.-Y., Zhang, Z.-X., Wu, T., Fei, Q., Feng, G., Zhang, N.-N.\*, Kumacheva, E.\*, & Liu, K.\* *Full-Spectrum Mapping of the Synthesis Landscape for Chiral Gold Nanoparticles*. *Manuscript in preparation*.
 
 ## Abstract
 
@@ -20,16 +20,17 @@ Chiral plasmonic nanoparticles show strong chiroptical activity, but their synth
 │   ├── experiment_history.csv        # Synthesis parameters, g-factor, cluster labels
 │   ├── sem_geometry.csv              # SEM-measured geometry (L, d, w, θ) for 15 particles
 │   ├── fdtd_simulations.xlsx         # 50 FDTD simulated structures with |g-factor|
+│   └── 80 sample SEM/                # SEM images for geometric measurement
 ├── scripts/
-│   ├── journal_style.py              # Shared plotting style (Nature-family formatting)
-│   ├── pipeline.py                   # Core pipeline: data loading, fPCA, clustering, UMAP
-│   ├── fig2_umap_landscape.py        # Figure 2: UMAP manifold & cluster spectra
-│   ├── fig3_param_mapping.py         # Figure 3: GP regression, SHAP, correlation matrix
-│   ├── fig4_classification_sisso.py  # Figure 4: Classification boundaries
-│   ├── si_gp_regression.py           # SI Figures S11–S12: GP diagnostics
-│   ├── si_classification.py          # SI Figures S13–S14: Classification comparison & LR SHAP
-│   ├── si_fdtd_validation.py         # SI Figure S18: FDTD cross-scale validation
-│   └── si_sisso_validation.py        # SI Figure S17: SISSO d⁴L robustness validation
+│   ├── style.py                       # Shared plotting style (Nature-family formatting)
+│   ├── pipeline.py                    # Core pipeline: data loading, fPCA, clustering, UMAP
+│   ├── spectral_manifold.py           # Fig 2: UMAP manifold & cluster spectra
+│   ├── parameter_response.py          # Fig 3: GP regression, SHAP, correlation matrix
+│   ├── cluster_boundaries.py          # Fig 4: Classification decision boundaries
+│   ├── gp_diagnostics.py              # SI Figs S11–S12: GP diagnostics
+│   ├── classifier_comparison.py       # SI Figs S13–S14: Classification comparison & LR SHAP
+│   ├── sisso_descriptor.py            # SI Fig S17: SISSO d⁴L robustness validation
+│   └── fdtd_cross_validation.py       # SI Fig S18: FDTD cross-scale validation
 ```
 
 
@@ -57,15 +58,15 @@ All scripts are run from the repository root:
 
 ```bash
 # Main figures
-python scripts/fig2_umap_landscape.py        # Figure 2 (~30 s)
-python scripts/fig3_param_mapping.py         # Figure 3 (~2 min)
-python scripts/fig4_classification_sisso.py  # Figure 4 (~10 s)
+python scripts/spectral_manifold.py          # Fig 2 (~30 s)
+python scripts/parameter_response.py         # Fig 3 (~2 min)
+python scripts/cluster_boundaries.py         # Fig 4 (~10 s)
 
 # SI figures
-python scripts/si_gp_regression.py           # SI S11–S12 (~3 min)
-python scripts/si_classification.py          # SI S13–S14 (~5 min)
-python scripts/si_sisso_validation.py        # SI S17 (~10 min)
-python scripts/si_fdtd_validation.py         # SI S18 (~20 s)
+python scripts/gp_diagnostics.py             # SI S11–S12 (~3 min)
+python scripts/classifier_comparison.py      # SI S13–S14 (~5 min)
+python scripts/sisso_descriptor.py           # SI S17 (~10 min)
+python scripts/fdtd_cross_validation.py      # SI S18 (~20 s)
 ```
 
 Generated figures are saved to the `figures/` directory as PDF (600 DPI) and PNG preview files.
@@ -98,7 +99,7 @@ If you use this code in your research, please cite:
 @article{yang2026fullspectrum,
   title={Full-Spectrum Mapping of the Synthesis Landscape for Chiral Gold Nanoparticles},
   author={Yang, Zhi-Bo and Li, Jia-Tong and Wang, Xue-Yao and Zhang, Zi-Xuan and Wu, Tianyi and Fei, Qiang and Feng, Guodong and Zhang, Ning-Ning and Kumacheva, Eugenia and Liu, Kun},
-  journal={XXXXXX},
+  journal={Manuscript in preparation},
   year={2026},
   doi={10.1038/XXXXXXX}
 }
