@@ -148,5 +148,5 @@ def umap_embed(fpc_std):
 
 def get_cluster_colors():
     """Return the 4-cluster color palette."""
-    import journal_style as js
+    import style as js
     return js.CLUSTER_COLORS_4
