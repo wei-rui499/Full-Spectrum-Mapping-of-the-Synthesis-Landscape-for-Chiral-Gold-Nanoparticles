@@ -15,7 +15,6 @@ Chiral plasmonic nanoparticles show strong chiroptical activity, but their synth
 ├── README.md
 ├── LICENSE
 ├── requirements.txt
-├── requirements-lock.txt
 ├── data/
 │   ├── g_factor_spectra.csv          # 80 g-factor spectra (351 wavelengths, 400–1100 nm)
 │   ├── experiment_history.csv        # Synthesis parameters, g-factor, cluster labels
@@ -52,10 +51,6 @@ source venv/bin/activate  # Linux/Mac
 
 # Install dependencies
 pip install -r requirements.txt
-
-# Optional: use the exact package set listed with the submission
-pip install -r requirements-lock.txt
-```
 
 ## Usage
 
