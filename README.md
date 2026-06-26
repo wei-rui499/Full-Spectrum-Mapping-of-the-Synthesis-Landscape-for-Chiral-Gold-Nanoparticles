@@ -1,6 +1,6 @@
 # Full-Spectrum Mapping of the Synthesis Landscape for Chiral Gold Nanoparticles
 
-This repository contains the code for reproducing the analyses and figures in:
+This repository contains the code and data used for the analyses and figures in:
 
 > Yang, Z.-B., Li, J.-T., Wang, X.-Y., Zhang, Z.-X., Wu, T., Fei, Q., Feng, G., Zhang, N.-N.\*, Kumacheva, E.\*, & Liu, K.\* *Full-Spectrum Mapping of the Synthesis Landscape for Chiral Gold Nanoparticles*. *Manuscript in preparation*.
 
@@ -15,6 +15,7 @@ Chiral plasmonic nanoparticles show strong chiroptical activity, but their synth
 ├── README.md
 ├── LICENSE
 ├── requirements.txt
+├── requirements-lock.txt
 ├── data/
 │   ├── g_factor_spectra.csv          # 80 g-factor spectra (351 wavelengths, 400–1100 nm)
 │   ├── experiment_history.csv        # Synthesis parameters, g-factor, cluster labels
@@ -22,6 +23,7 @@ Chiral plasmonic nanoparticles show strong chiroptical activity, but their synth
 │   ├── fdtd_simulations.xlsx         # 50 FDTD simulated structures with |g-factor|
 │   └── 80 sample SEM/                # SEM images for geometric measurement
 ├── scripts/
+│   ├── runtime.py                     # Runtime settings
 │   ├── style.py                       # Shared plotting style (Nature-family formatting)
 │   ├── pipeline.py                    # Core pipeline: data loading, fPCA, clustering, UMAP
 │   ├── spectral_manifold.py           # Fig 2: UMAP manifold & cluster spectra
@@ -50,6 +52,9 @@ source venv/bin/activate  # Linux/Mac
 
 # Install dependencies
 pip install -r requirements.txt
+
+# Optional: use the exact package set listed with the submission
+pip install -r requirements-lock.txt
 ```
 
 ## Usage
@@ -83,7 +88,7 @@ Generated figures are saved to the `figures/` directory as PDF (600 DPI) and PNG
 ## Data
 
 - `g_factor_spectra.csv`: 80 samples × 351 wavelengths (400–1100 nm, 2 nm step), dimensionless g-factor
-- `experiment_history.csv`: Synthesis parameters (CTAB, HAuCl₄, AA, GSH in mM), max |g-factor|, cluster labels
+- `experiment_history.csv`: Synthesis parameters (CTAB, HAuCl₄ and AA in mM; raw GSH values in mM are converted to µM by `scripts/pipeline.py` for plotting and modelling), max |g-factor|, cluster labels
 - `sem_geometry.csv`: SEM-measured geometric parameters (L, d, w, θ) for 15 representative particles
 - `fdtd_simulations.xlsx`: 50 FDTD-simulated 432 helicoid structures with geometric parameters and |g-factor|
 
