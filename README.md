@@ -8,6 +8,13 @@ This repository contains the code and data used for the analyses and figures in:
 
 Chiral plasmonic nanoparticles show strong chiroptical activity, but their synthesis remains difficult to rationalize because synthesis parameters, nanoparticle morphology and the asymmetry factor (g-factor) are coupled in a high-dimensional landscape. Here we establish a data-driven framework for chiral gold 432 helicoids by using the full g-factor spectrum, rather than a scalar peak value, as the coordinate of chemical space. Gryffin-driven autonomous synthesis identifies a high-|g-factor| formulation with |g-factor| = 0.24, while spectral manifold learning converts 80 outcomes into a topological landscape with four structural branches. The map reveals that gold precursor loading enables access to three high-|g-factor| branches, whereas L-glutathione loading directs branch selection. Symbolic regression identifies a d⁴L descriptor, linking gap depth (d) and particle length (L) to the |g-factor|. Low-signal regions, normally discarded during optimisation, contain previously unreported chiral rhombic dodecahedra, connecting achiral octahedra to final 432 helicoids and redirecting machine learning toward mechanistic synthesis understanding.
 
+**Reviewer note — interactive UMAP viewer:** An interactive version of the
+UMAP map is available directly through GitHub Pages:
+[Open the interactive UMAP viewer](https://wei-rui499.github.io/Full-Spectrum-Mapping-of-the-Synthesis-Landscape-for-Chiral-Gold-Nanoparticles/).
+The viewer is a single self-contained HTML file (~8.2 MB) stored at
+`docs/interactive_umap.html`; SEM thumbnails are embedded as base64 data, so no
+local image directory is required.
+
 ## Repository Structure
 
 ```
@@ -32,6 +39,8 @@ Chiral plasmonic nanoparticles show strong chiroptical activity, but their synth
 │   ├── classifier_comparison.py       # SI Figs S13–S14: Classification comparison & LR SHAP
 │   ├── sisso_descriptor.py            # SI Fig S17: SISSO d⁴L robustness validation
 │   └── fdtd_cross_validation.py       # SI Fig S18: FDTD cross-scale validation
+├── docs/
+│   ├── interactive_umap.html
 ```
 
 
