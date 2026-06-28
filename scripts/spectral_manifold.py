@@ -4,6 +4,12 @@ Spectral manifold learning via functional PCA, KMeans clustering, and UMAP embed
 Outputs:
   figures/Fig2_UMAP_4cluster.pdf          — UMAP scatter with 4 clusters
   figures/Fig2_spectra_by_cluster.pdf     — mean spectra per cluster
+
+Note:
+  UMAP coordinates are used only as a two-dimensional visualization of the
+  fPC-space neighbourhood structure. Re-fitting UMAP can change the absolute
+  layout across package versions or implementations without changing the
+  fPC-space clustering or the conclusions.
 """
 import runtime  # noqa: F401
 import numpy as np
